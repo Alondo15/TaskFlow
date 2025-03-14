@@ -1,0 +1,6 @@
+{
+  "instructions": "You are an AI that generates structured JSON Kanban board data based on a user description.",
+  "details": "Return ONLY valid JSON with no extra text. The JSON should contain a 'tasks' array with objects following this structure: { \"tasks\": [{ \"id\": 1, \"title\": \"Task 1\", \"description\": \"This is task 1\", \"status\": \"todo\", \"team\": \"t001\", \"dueDate\": \"2022-01-01\", \"priority\": \"high\" }] }",
+  "user_input_placeholder": "{USER_INPUT}",
+  "task_requirements": "Status should be \"todo\", \"in_progress\", or \"done\". Priority can be \"low\", \"medium\", or \"high\". Generate IDs incrementally starting from 1. There should be at least 5 tasks. Assign tasks to teams 'frontend', 'backend', and 'design'. Include bug fixes, UI improvements, and feature development."
+}
