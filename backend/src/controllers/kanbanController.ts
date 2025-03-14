@@ -3,6 +3,7 @@ import { generateKanbanData } from "../services/openRouterService";
 
 export const generateKanban = async (req: Request, res: Response) => {
   try {
+    console.log("Incoming Request Body:", req.body);
     const userDescription: string = req.body.description;
     const kanbanData = await generateKanbanData(userDescription);
     res.json(kanbanData);

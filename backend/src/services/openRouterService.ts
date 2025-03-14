@@ -40,14 +40,11 @@ export const generateKanbanData = async (userDescription: string) => {
   const rawContent = jsonResponse.choices[0].message.content;
 
   // Extract JSON from OpenRouter's response
+  const jsonMatch = rawContent.match(/```json\n([\s\S]*?)\n```/);
 
-  try {
-    return JSON.parse(rawContent);
-  } catch (err) {
-    console.error("Error parsing OpenRouter's response", err);
-    return {
-      cards: [],
-      errors: ["Error parsing OpenRouter's response"],
-    };
+  if (jsonMatch && jsonMatch[1]) {
+    return JSON.parse(jsonMatch[1]); // Return clean JSON
+  } else {
+    throw new Error("Invalid JSON format received from OpenRouter");
   }
 };
