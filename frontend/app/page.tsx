@@ -2,13 +2,29 @@
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
+import PageTitle from "./components/PageTitle/PageTitle";
+import PastProjectsCarousel from "./components/PastProjectsCarousel/PastProjectsCarousel";
+import DescriptionBar from "./components/DescriptionBar/DescriptionBar";
 
 export default function Home() {
+  const handleGenerate = () => {};
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>TaskFlow</h1>
-      </main>
-    </div>
+    <>
+      <div>
+        <PageTitle title="Welcome Back John Doe" />
+        <h1 className="mb-4 font-semibold">Past Projects</h1>
+        <PastProjectsCarousel />
+      </div>
+      <div className="generate">
+        <h1>Generate A New Kanban Board</h1>
+        <DescriptionBar onGenerate={handleGenerate} />
+        <div className="examples">
+          <p>Examples:</p>
+          <button>Example 1</button>
+          <button>Example 2</button>
+          <button>Example 3</button>
+        </div>
+      </div>
+    </>
   );
 }

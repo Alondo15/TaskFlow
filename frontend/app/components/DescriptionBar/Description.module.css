@@ -1,0 +1,22 @@
+.container {
+  width: 60%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--soft-dark-background);
+  border-radius: 100vw;
+}
+
+.container input {
+  height: 90%;
+  outline: none;
+  border: none;
+  color: var(--soft-foreground);
+  width: 80%;
+  padding: 1rem 3rem;
+}
+
+.container button {
+  height: 100%;
+}

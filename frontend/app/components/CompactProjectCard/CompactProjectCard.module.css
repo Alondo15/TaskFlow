@@ -1,0 +1,38 @@
+.container {
+  min-width: 320px;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--soft-forground);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.top {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top h1 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.bottom p {
+  font-size: 0.8rem;
+  color: var(--soft-forground);
+}
+
+.bottom a {
+  place-self: flex-end;
+  padding-inline: 0.5rem;
+  color: var(--primary-clr);
+}
