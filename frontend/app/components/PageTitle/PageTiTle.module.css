@@ -1,0 +1,30 @@
+.container {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container h1 {
+  font-size: 36px;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 100vw;
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

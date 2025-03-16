@@ -1,28 +1,42 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
+  --soft-dark-background: #00000031;
   --foreground: #171717;
+  --soft-forground: #17171770;
+  --primary-clr: #1e64dd;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins-Regular", Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  padding-inline: 2rem;
 }
 
 input {
@@ -31,30 +45,39 @@ input {
 }
 
 button {
-  padding: 12px 20px;
-  background-color: #4caf50;
+  padding: 12px 30px;
+  background-color: var(--primary-clr);
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 100vw;
 }
 
-table {
+.generate {
+  min-height: 50vh;
   width: 100%;
-  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-th,
-td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
+.generate h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 3rem;
 }
 
-th {
-  background-color: #f2f2f225;
+.generate .examples {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f91a;
+.generate .examples button {
+  background-color: #1e64dd49;
+  color: rgb(80, 80, 80);
+  font-size: 0.9rem;
 }
